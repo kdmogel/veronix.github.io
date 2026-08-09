@@ -1,0 +1,8 @@
+
+body{font-family:Arial,sans-serif;background:#111;color:#eee;margin:0}
+header{background:#1b1b1b;padding:30px;text-align:center;border-bottom:3px solid #c9a227}
+nav a{color:#c9a227;margin:0 10px;text-decoration:none}
+main{max-width:900px;margin:auto;padding:30px}
+.card{background:#1f1f1f;padding:20px;border-radius:8px;margin:20px 0}
+footer{text-align:center;padding:20px;color:#aaa}
+h1,h2{color:#c9a227}
