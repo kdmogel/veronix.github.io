@@ -1,0 +1,21 @@
+VERONIX eBay OAUTH REDIRECT PAGES
+
+Copy these two HTML files into the same local veronix.github.io folder that already
+contains index.html, privacy.html, terms.html, contact.html, and styles.css.
+
+Files:
+- oauth-callback.html
+- oauth-declined.html
+
+Then:
+1. GitHub Desktop: commit the two new files.
+2. Push origin.
+3. Verify both pages load in the browser.
+4. In the eBay Production RuName settings use:
+   Auth Accepted URL:
+   https://kdmogel.github.io/veronix.github.io/oauth-callback.html
+
+   Auth Declined URL:
+   https://kdmogel.github.io/veronix.github.io/oauth-declined.html
+
+5. Save the RuName settings.

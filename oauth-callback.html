@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eBay Connected | Veronix Coin Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .oauth-wrap{max-width:760px;margin:60px auto;padding:0 22px}
+    .oauth-card{background:#1f1f1f;padding:28px;border-radius:10px;border:1px solid #383838}
+    .ok{font-size:42px;margin:0 0 8px}
+    .muted{color:#bbb;line-height:1.6}
+    button{background:#c9a227;color:#111;border:0;border-radius:7px;padding:12px 18px;font-weight:700;cursor:pointer}
+    #copyStatus{margin-top:12px;color:#c9a227}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Veronix Coin Manager</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main class="oauth-wrap">
+  <section class="oauth-card">
+    <div class="ok">✓</div>
+    <h2>eBay authorization received</h2>
+    <p class="muted">
+      Return to Veronix Coin Manager and complete the connection immediately.
+      The authorization response is short-lived and can only be used once.
+    </p>
+    <button id="copyButton" type="button">Copy authorization response URL</button>
+    <div id="copyStatus" role="status" aria-live="polite"></div>
+    <p class="muted">
+      Do not share the copied URL, authorization code, access token, refresh token,
+      Client Secret, or other eBay credentials with anyone.
+    </p>
+  </section>
+</main>
+<footer>&copy; 2026 Veronix, LLC</footer>
+<script>
+  document.getElementById('copyButton').addEventListener('click', async () => {
+    const status = document.getElementById('copyStatus');
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      status.textContent = 'Copied. Paste it into Veronix Coin Manager now.';
+    } catch {
+      status.textContent = 'Copy was blocked by the browser. Copy the complete URL from the address bar instead.';
+    }
+  });
+</script>
+</body>
+</html>
